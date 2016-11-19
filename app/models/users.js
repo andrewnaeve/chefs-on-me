@@ -12,7 +12,8 @@ var UserSchema = new Schema({
   // Notice that it is required, as well. It must be entered 
   // or else mongoose will throw an error.
 
-  name: {
+ 
+name: {
     type: String,
     trim: true,
     required: "String is Required"
@@ -23,26 +24,14 @@ var UserSchema = new Schema({
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"],
   },
 
-
-  // This must be a unique number in the collection, and it must be entered
-  number: {
-    type: Number,
-    unique: true,
-    required: true
-  },
-  // this will only take a string that looks like an email. 
-  // It must match the regex before it's accepted
-  longstring: {
+  password: {
     type: String,
-    validate: [
-      //Function takes in the value as an argument
-      function(input) {
-        //If this returns true, proceed. If not, return an error message.
-        return input.length >= 6;
-      },
-      //Error Message
-      'Longstring should be longer.'
-    ]
+    required: "Password is required"
+  },
+
+  address: {
+    type: String,
+    required: "Address is required"
   }
 });
 
