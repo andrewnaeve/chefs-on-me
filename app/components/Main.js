@@ -1,5 +1,22 @@
 // Include React 
 var React = require('react');
+// Include React 
+var React = require('react');
+var Search = require('./children/Search.js');
+
+var Main = React.createClass({
+
+	getInitialState: function () {
+		return { searchTerm: '', zipCode: '' }
+	},
+
+	updateSearch: function (newTerm, newZip) {
+		this.setState({
+			searchTerm: newTerm,
+			zipCode: newZip
+		});
+	},
+
 
 
 var Main = React.createClass({
