@@ -1,19 +1,8 @@
 // Include React 
 var React = require('react');
-var Search = require('./children/Search');
+
 
 var Main = React.createClass({
-
-	getInitialState: function () {
-		return { searchTerm: '', zipCode: '' }
-	},
-
-	updateSearch: function (newTerm, newZip) {
-		this.setState({
-			searchTerm: newTerm,
-			zipCode: newZip
-		});
-	},
 
 
 	//render component
@@ -26,9 +15,7 @@ var Main = React.createClass({
 					</div>
 				</div>
 
-				<div>
-					<Search onChange={this.changeSearch} />
-				</div>
+
 
 			</div>
 
