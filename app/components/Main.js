@@ -1,9 +1,9 @@
-// Include React 
+// Include React
 var React = require('react');
 var Search = require('./children/Search');
 
 var Main = React.createClass({
-
+	
 	getInitialState: function () {
 		return { searchTerm: '', zipCode: '' }
 	},
