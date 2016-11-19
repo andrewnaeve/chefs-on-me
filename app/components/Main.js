@@ -1,5 +1,6 @@
 // Include React 
 var React = require('react');
+var Signup = require('./children/Signup.js');
 
 
 var Main = React.createClass({
@@ -15,8 +16,7 @@ var Main = React.createClass({
 					</div>
 				</div>
 
-
-
+				<Signup />
 			</div>
 
 
