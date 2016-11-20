@@ -15,3 +15,12 @@
     z-index: -100;
     background-size: cover;
 }
+
+.main {
+  height: 600px;
+  text-align: center;
+}
+
+.logo {
+  width: 500px;
+}
