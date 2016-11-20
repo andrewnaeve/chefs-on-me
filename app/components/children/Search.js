@@ -15,11 +15,17 @@ var Search = React.createClass({
         })
     },
 
+    handleChange: function (e) {
+        var search = this.refs.search.value;
+        console.log(search)
+        this.changeState(search)
+    },
+
     render: function () {
         return(
 
             <div>
-                <form onSubmit={this.changeState}>
+                <form onSubmit={this.handleChange}>
 
                     <div className="form-group">
                         <label htmlFor="term">Search Term:</label>
