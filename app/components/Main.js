@@ -5,17 +5,13 @@ var Home = require('./children/Home');
 
 var Search = require('./children/Home');
 var Signup = require('./children/Signup');
-
-
-
-
-
-
+var Display = require('./children/Display');
 
 
 var Main = React.createClass({
   render: function () {
     return (
+
         <div className="container">
           <div className="row">
             <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,26 +20,19 @@ var Main = React.createClass({
               </a>
               <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
                 <ul className="nav navbar-nav navbar-right" >
-                  <li><a href ="#about" data-toggle="modal">About</a>
-                  </li>
-                  <li><a href="#trade" data-toggle="modal"
-                      >Tutorial</a>
-                  </li>
-                  <li>
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      Browse<span className="caret"></span>
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>Search by Location</li>
-                      <li><a href="#">Search by Category</a></li>
-                      <li><a href="#">Search by Chef</a></li>
-                    </ul>
 
-                  </li>
-                  <li><a href="#signup" data-toggle="modal">Sign Up</a>
-                  </li>
-                  <li><a href="#login" data-toggle="modal">Login</a>
-                  </li>
+	              	<li>
+	              		<a href="#home">Home</a>
+	              	</li>
+
+	                  <li><a href ="#about" data-toggle="modal">About Us</a>
+	                  </li>
+
+	                <li>
+	                	<a href="#search">Find A Chef</a>
+	                </li>
+	                  <li><a href="#signup" data-toggle="modal">Sign Up / Login</a>
+	                  </li>
                 </ul>
               </div>
             </div>
@@ -53,6 +42,7 @@ var Main = React.createClass({
             </div>
 
             </div>
+
         )
       }
 

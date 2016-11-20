@@ -2,8 +2,6 @@ var React = require('react');
 
 var Display = React.createClass({
 
- 
-
     render: function() {
 
         var searchTerm = this.props.searchTerm; 
