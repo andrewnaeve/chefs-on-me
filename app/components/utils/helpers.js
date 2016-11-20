@@ -6,7 +6,7 @@ var axios = require('axios');
 var helpers = {
 
 	postSaved: function(name, email, password){
-
+		console.log("WTF")
 		var name = name;
 		var email = email;
 		var password = password;

@@ -1,12 +1,25 @@
 var React = require('react');
+var Display = require('./Display');
 
 
 
 var Search = React.createClass({
+
+    getInitialState: function() {
+        return { searchTerm: '' }
+    },
+
+    changeState: function(newSearch) {
+        this.setState({
+            searchTerm: newSearch
+        })
+    },
+
     render: function () {
         return(
+
             <div>
-                <form onSubmit={this.onButtonClick}>
+                <form onSubmit={this.changeState}>
 
                     <div className="form-group">
                         <label htmlFor="term">Search Term:</label>
@@ -15,7 +28,11 @@ var Search = React.createClass({
 
                     <button type="submit" className="btn btn-default" id="searchBtn">Search</button>
 
-                </form>    
+
+                </form>
+
+                <Display searchTerm={this.state.searchTerm} />
+
             </div>
         )
     }
