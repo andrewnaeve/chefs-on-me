@@ -28,9 +28,9 @@ module.exports = (
 		<Route path='Signup' component={Signup} >
 
 		</Route>
-		
+
 		<IndexRedirect to={"/Home"} />
-		
+
 	</Route>
 
 );
