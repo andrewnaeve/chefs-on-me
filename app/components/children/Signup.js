@@ -6,6 +6,10 @@ var Signup = React.createClass({
 	handleChange: function(e){
 
 	},
+	onButtonClick: function(e){
+		e.preventDefault();
+
+	},
 
 
 	//render component
@@ -14,7 +18,7 @@ var Signup = React.createClass({
 				<div className="row">
 
 					<h2>Sign Up!</h2>
-		            <form className="create-update-form" action="/add" method="POST">
+		            <form onSubmit={this.onButtonClick} className="create-update-form" action="/add" method="POST">
 
 						<div className="form-group">
 							<label for="exampleInputEmail1">Email address</label>
