@@ -15,10 +15,10 @@ var Main = React.createClass({
         <div className="container">
           <div className="row">
             <div class="navbar navbar-inverse navbar-fixed-top">
-              <a className="navbar-brand navbar-left" href="/">
+              <a className="navbar-left" href="#home">
                 <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
               </a>
-              <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
+              
                 <ul className="nav navbar-nav navbar-right" >
 
 	              	<li>
@@ -34,14 +34,17 @@ var Main = React.createClass({
 	                  <li><a href="#signup" data-toggle="modal">Sign Up / Login</a>
 	                  </li>
                 </ul>
-              </div>
             </div>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
             <div className="row">
               {this.props.children}
             </div>
 
-            </div>
+         </div>
 
         )
       }
