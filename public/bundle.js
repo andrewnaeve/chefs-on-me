@@ -27197,44 +27197,42 @@
 	var React = __webpack_require__(1);
 
 	var Team = React.createClass({
-	    displayName: "Team",
+	  displayName: "Team",
 
-	    render: function render() {
-
-	        var teamStyle = {
-	            color: "white",
-	            fontSize: "24",
-	            textAlign: "center",
-	            backgroundColor: "#41DEB8",
-	            opacity: "0.75"
-	        };
-	        return React.createElement(
-	            "div",
-	            { style: teamStyle, className: "col-lg-8 col-lg-offset-2" },
-	            React.createElement(
-	                "div",
-	                { className: "row" },
-	                React.createElement(
-	                    "h2",
-	                    null,
-	                    "The Team"
-	                )
-	            ),
-	            React.createElement(
-	                "div",
-	                { className: "row" },
-	                React.createElement(
-	                    "div",
-	                    { className: "team" },
-	                    React.createElement(
-	                        "p",
-	                        null,
-	                        "We at Chef's on Me believe in bringing the exclusivity & luxury of a private chef experience to your home at an affordable price."
-	                    )
-	                )
-	            )
-	        );
-	    }
+	  render: function render() {
+	    var imgStyle = {
+	      width: 500
+	    };
+	    var teamStyle = {
+	      color: "white",
+	      fontSize: "24",
+	      textAlign: "center",
+	      backgroundColor: "#41DEB8",
+	      opacity: "0.75"
+	    };
+	    return React.createElement(
+	      "div",
+	      { style: teamStyle, className: "col-lg-8 col-lg-offset-2" },
+	      React.createElement(
+	        "div",
+	        { className: "row" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "Meet The Team"
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "row" },
+	        React.createElement(
+	          "div",
+	          { className: "team" },
+	          React.createElement("img", { style: imgStyle, src: "img/team.jpg", alt: "" })
+	        )
+	      )
+	    );
+	  }
 	});
 
 	module.exports = Team;

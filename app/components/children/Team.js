@@ -2,7 +2,9 @@ var React = require('react');
 
 var Team = React.createClass({
     render: function () {
-
+        var imgStyle = {
+          width: 500
+        }
         var teamStyle = {
             color: "white",
             fontSize: "24",
@@ -13,12 +15,11 @@ var Team = React.createClass({
         return (
             <div style={teamStyle} className="col-lg-8 col-lg-offset-2">
               <div className="row">
-                <h2>The Team</h2>
+                <h2>Meet The Team</h2>
               </div>
               <div className="row">
                 <div className="team">
-                  <p>We at Chef's on Me believe in bringing the exclusivity & luxury of a
-                  private chef experience to your home at an affordable price.</p>
+                  <img style={imgStyle} src="img/team.jpg" alt=""/>
                 </div>
               </div>
             </div>
