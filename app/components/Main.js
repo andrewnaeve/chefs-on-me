@@ -6,22 +6,6 @@ var Display = require('./children/Display');
 var Navbar = require('./children/Navbar.js');
 
 var Main = React.createClass({
-
-	getInitialState: function () {
-		return {
-      searchTerm: '',
-
-    }
-	},
-
-	updateSearch: function (newTerm) {
-
-		this.setState({
-			searchTerm: newTerm,
-		});
-
-	},
-
 	//render component
 	render: function(){
 		return(
