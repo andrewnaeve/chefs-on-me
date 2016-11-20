@@ -1,7 +1,14 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Router = require('react-router');
+var Home = require('./children/Home');
+var Navbar = require('./children/Navbar');
+var Search = require('./children/Home');
+var Signup = require('./children/Signup');
+
+
+
+
 
 
 
@@ -35,8 +42,8 @@ var Main = React.createClass({
               </ul>
             </div>
 
+            <Home />
 
-            {this.props.children}
 
           </div>
         )

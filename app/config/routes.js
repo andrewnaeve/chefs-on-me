@@ -10,26 +10,27 @@ var IndexRoute	= Router.IndexRoute;
 var IndexRedirect = Router.IndexRedirect;
 
 // Reference the high-level components
-var Main = require('./app/components/Main');
-var Home = require('./app/components/children/Home');
+var Main = require('../components/Main');
+var Home = require('../components/children/Home');
+var Search = require('../components/children/Search');
+var Signup = require('../components/children/Signup');
 
 
 module.exports = (
 
-
 	<Route path='/' component={Main}>
 		<Route path='Home' component={Home} >
 
-
-
+		</Route>
+		<Route path='Search' component={Search} >
 
 		</Route>
-	
+		<Route path='Signup' component={Signup} >
 
-
+		</Route>
+		
 		<IndexRedirect to={"/Home"} />
 		
 	</Route>
-
 
 );

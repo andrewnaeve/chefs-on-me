@@ -7,13 +7,14 @@ var Display = require('./components/children/Display');
 var Navbar = require('./components/children/Navbar');
 var Home = require('./components/children/Home');
 var Main = require('./components/Main');
-var Router = require('react-router');
-var Route = Router.Route;
-var IndexRoute	= Router.IndexRoute;
-var IndexRedirect = Router.IndexRedirect;
-var browserHistory = require('react-router').browserHistory;
+// var Router = require('react-router');
 
-var routes = require('../routes')
+// var Route = Router.Route;
+// var IndexRoute	= Router.IndexRoute;
+// var IndexRedirect = Router.IndexRedirect;
+// var browserHistory = require('react-router').browserHistory;
+var Router = require('react-router').Router
+var routes = require('./config/routes')
 // Include the Main Component
 
 
