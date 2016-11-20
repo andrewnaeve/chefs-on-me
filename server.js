@@ -41,6 +41,10 @@ app.get('/', function(req, res){
   res.sendFile('./public/index.html');
 })
 
+// app.post('/create', function(req, res) {
+//   var UserOrChef = req.body.
+// });
+
 app.post('/create/chef', function(req, res) {
 
   var newChef = new Chef(req.body);

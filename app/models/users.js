@@ -28,10 +28,13 @@ name: {
     type: String,
     required: "Password is required"
   },
-
   address: {
     type: String,
     required: "Address is required"
+  },
+  dinerOrChef: {
+    type: String,
+    required: "Need to select diner or chef"
   }
 });
 
