@@ -42,7 +42,8 @@ var Main = React.createClass({
               </ul>
             </div>
 
-            <Home />
+
+            <Signup />
 
 
           </div>
