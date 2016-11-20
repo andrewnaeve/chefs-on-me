@@ -1,5 +1,6 @@
 // Include React
 var React = require('react');
+var Signup = require('./children/Signup.js');
 
 var Main = React.createClass({
 
@@ -11,6 +12,7 @@ var Main = React.createClass({
 	render: function(){
 		return(
 			<div className="container">
+
         <div className="row">
           <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
             <ul className="nav navbar-nav navbar-right" >
