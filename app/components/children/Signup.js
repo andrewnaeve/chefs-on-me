@@ -1,21 +1,31 @@
 // Include React
 var React = require('react');
-
+var helpers = require('../utils/helpers');
 
 var Signup = React.createClass({
 	handleChange: function(e){
 
 	},
+
 	onButtonClick: function(e){
 		//console.log("E: " + e);
 		e.preventDefault();
 		//console.log(this.refs.name.value);
-		console.log(this.refs.dinerOrChef.value);
+		console.log("hello")
+
 		var namebro = this.refs.name.value;
+		console.log(namebro)
 		var email = this.refs.email.value;
+		console.log(email)
 		var password = this.refs.password.value;
-		var address = this.refs.address.value;
-		var dinerOrChef = this.refs.dinerOrChef.value;
+		console.log(password)
+
+		helpers.postSaved(namebro, email, password)
+			.then(function(data) {
+				console.log(data);
+			}.bind(this))
+
+
 		//console.log(namebro);
 
 		//console.log(name + ' ' + email + ' ' + password + ' ' + address + ' ' + dinerOrChef);
@@ -41,10 +51,10 @@ var Signup = React.createClass({
 			            <input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
 			        </div>
 			        <div className="radio">
-			        	<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="Chef" />Chef</label>
+			        	<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="0" />Chef</label>
 			        </div>
 			     	<div className="radio">
-			        	<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="Diner" />Diner</label>
+			        	<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="1" />Diner</label>
 			        </div>
 
 			        <button type="submit" className="btn btn-primary">Submit</button>

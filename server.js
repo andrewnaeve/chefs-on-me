@@ -5,8 +5,7 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 
 //Require History Schema
-var Chefs = require('./app/models/chefs.js');
-var Users = require('./app/models/users.js');
+var User = require('./app/models/users.js');
 
 // Create Instance of Express
 var app = express();
@@ -41,37 +40,49 @@ app.get('/', function(req, res){
   res.sendFile('./public/index.html');
 })
 
+
+
+app.post('/create/users', function(req, res) {
+
+  var newUser = new User(req.body);
+
+  newUser.save(function(err, doc) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      res.send(doc._id);
+    }
+
+  });
+
+});
+
 // app.post('/create', function(req, res) {
 //   var UserOrChef = req.body.
 // });
 
-app.post('/create/chef', function(req, res) {
+// app.get('/create/user', function(req, res) {
+//   res.send('hi')
+// })
 
-  var newChef = new Chef(req.body);
-  newChef.save(function(err, doc) {
-    if(err) {
-      res.send(err);
-    }
-    else {
-      console.log(doc);
-    }
-  })
 
-})
 
-app.post('/create/user', function(req, res) {
 
-  var newUser = new User(req.body);
-  newUser.save(function(err, doc) {
-    if(err) {
-      res.send(err);
-    }
-    else {
-      console.log(doc);
-    }
-  })
+// app.post('/hi/users', function(req, res) {
+// res.send('hi')
+
+  // var newUser = new User(req.body);
+  // newUser.save(function(err, doc) {
+  //   if(err) {
+  //     res.send(err);
+  //   }
+  //   else {
+  //     console.log(doc);
+  //   }
+  // })
   
-})
+// })
 
 // Listener
 app.listen(PORT, function() {

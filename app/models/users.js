@@ -12,12 +12,13 @@ var UserSchema = new Schema({
   // Notice that it is required, as well. It must be entered 
   // or else mongoose will throw an error.
 
- 
-name: {
-    type: String,
-    trim: true,
-    required: "String is Required"
-  },
+
+
+  name: {
+      type: String,
+      trim: true,
+      required: "String is Required"
+    },
 
   email: {
     type: String,
@@ -27,15 +28,15 @@ name: {
   password: {
     type: String,
     required: "Password is required"
-  },
-  address: {
-    type: String,
-    required: "Address is required"
-  },
-  dinerOrChef: {
-    type: String,
-    required: "Need to select diner or chef"
   }
+  // address: {
+  //   type: String,
+  //   required: "Address is required"
+  // },
+  // dinerOrChef: {
+  //   type: String,
+  //   required: "Need to select diner or chef"
+  // }
 });
 
 // This creates our model from the above schema, using mongoose's model method.
