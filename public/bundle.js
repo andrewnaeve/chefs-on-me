@@ -21352,6 +21352,15 @@
 	              null,
 	              React.createElement(
 	                'a',
+	                { href: '#tutorial', 'data-toggle': 'modal' },
+	                'Get Started'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
 	                { href: '#search' },
 	                'Find A Chef'
 	              )
@@ -27059,6 +27068,8 @@
 	var Search = __webpack_require__(180);
 	var Signup = __webpack_require__(159);
 	var About = __webpack_require__(248);
+	var Tutorial = __webpack_require__(249);
+	var Team = __webpack_require__(250);
 
 	module.exports = React.createElement(
 		Route,
@@ -27066,6 +27077,7 @@
 		React.createElement(Route, { path: 'Home', component: Home }),
 		React.createElement(Route, { path: 'Search', component: Search }),
 		React.createElement(Route, { path: 'Signup', component: Signup }),
+		React.createElement(Route, { path: 'Tutorial', component: Tutorial }),
 		React.createElement(Route, { path: 'About', component: About }),
 		React.createElement(Route, { path: 'Team', component: Team }),
 		React.createElement(IndexRedirect, { to: "/Home" })
@@ -27121,6 +27133,111 @@
 	});
 
 	module.exports = About;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Tutorial = React.createClass({
+	    displayName: "Tutorial",
+
+	    render: function render() {
+	        var videoStyle = {
+	            opacity: "1"
+	        };
+	        var tutorialStyle = {
+	            color: "white",
+	            fontSize: "24",
+	            textAlign: "center",
+	            backgroundColor: "#41DEB8",
+	            opacity: "0.75"
+	        };
+	        return React.createElement(
+	            "div",
+	            { style: tutorialStyle, className: "col-lg-8 col-lg-offset-2" },
+	            React.createElement(
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "h2",
+	                    null,
+	                    "Getting Started"
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "div",
+	                    { className: "tutorial" },
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Let the experience begin..."
+	                    ),
+	                    React.createElement("iframe", { style: videoStyle, width: "560", height: "500", src: "https://www.youtube.com/embed/mtNIdiOpJA0", frameborder: "0", allowfullscreen: true })
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Tutorial;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Team = React.createClass({
+	    displayName: "Team",
+
+	    render: function render() {
+
+	        var teamStyle = {
+	            color: "white",
+	            fontSize: "24",
+	            textAlign: "center",
+	            backgroundColor: "#41DEB8",
+	            opacity: "0.75"
+	        };
+	        return React.createElement(
+	            "div",
+	            { style: teamStyle, className: "col-lg-8 col-lg-offset-2" },
+	            React.createElement(
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "h2",
+	                    null,
+	                    "The Team"
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "div",
+	                    { className: "team" },
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "We at Chef's on Me believe in bringing the exclusivity & luxury of a private chef experience to your home at an affordable price."
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Team;
 
 /***/ }
 /******/ ]);

@@ -15,6 +15,9 @@ var Home = require('../components/children/Home');
 var Search = require('../components/children/Search');
 var Signup = require('../components/children/Signup');
 var About = require('../components/children/About');
+var Tutorial = require('../components/children/Tutorial');
+var Team = require('../components/children/Team');
+
 
 module.exports = (
 
@@ -26,6 +29,9 @@ module.exports = (
 
 		</Route>
 		<Route path='Signup' component={Signup} >
+
+		</Route>
+    <Route path='Tutorial' component={Tutorial} >
 
 		</Route>
 

@@ -29,7 +29,9 @@ var Main = React.createClass({
                 </li>
                 <li><a href ="#team" data-toggle="modal">Team</a>
                 </li>
-	                <li>
+                <li><a href ="#tutorial" data-toggle="modal">Get Started</a>
+                </li>
+                <li>
 	                	<a href="#search">Find A Chef</a>
 	                </li>
 	                  <li><a href="#signup" data-toggle="modal">Sign Up / Login</a>
