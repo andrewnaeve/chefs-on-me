@@ -37,6 +37,7 @@ var Main = React.createClass({
             <h1>Chefs On Me</h1>
           </div>
         </div>
+        <Signup />
       </div>
 		)
 	}
