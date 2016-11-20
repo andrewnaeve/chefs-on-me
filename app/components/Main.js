@@ -16,37 +16,43 @@ var Signup = require('./children/Signup');
 var Main = React.createClass({
   render: function () {
     return (
+        <div className="container">
           <div className="row">
-            <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
-              <ul className="nav navbar-nav navbar-right" >
-                <li><a href ="#about" data-toggle="modal">About</a>
-                </li>
-                <li><a href="#trade" data-toggle="modal"
-                    >Tutorial</a>
-                </li>
-                <li>
-                  <a className="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    Browse<span className="caret"></span>
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>Search by Location</li>
-                    <li><a href="#">Search by Category</a></li>
-                    <li><a href="#">Search by Chef</a></li>
-                  </ul>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <a className="navbar-brand navbar-left" href="/">
+                <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
+              </a>
+              <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
+                <ul className="nav navbar-nav navbar-right" >
+                  <li><a href ="#about" data-toggle="modal">About</a>
+                  </li>
+                  <li><a href="#trade" data-toggle="modal"
+                      >Tutorial</a>
+                  </li>
+                  <li>
+                    <a className="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      Browse<span className="caret"></span>
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>Search by Location</li>
+                      <li><a href="#">Search by Category</a></li>
+                      <li><a href="#">Search by Chef</a></li>
+                    </ul>
 
-                </li>
-                <li><a href="#signup" data-toggle="modal">Sign Up</a>
-                </li>
-                <li><a href="#login" data-toggle="modal">Login</a>
-                </li>
-              </ul>
+                  </li>
+                  <li><a href="#signup" data-toggle="modal">Sign Up</a>
+                  </li>
+                  <li><a href="#login" data-toggle="modal">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+            <div className="row">
+              {this.props.children}
             </div>
 
-
-            {this.props.children}
-
-
-          </div>
+            </div>
         )
       }
 
@@ -54,4 +60,3 @@ var Main = React.createClass({
 
 
 module.exports = Main;
-
