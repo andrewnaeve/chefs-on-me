@@ -46,7 +46,6 @@
 
 	'use strict';
 
-	// Include the Main React Dependencies
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 	var Signup = __webpack_require__(159);
@@ -58,25 +57,11 @@
 
 	var Router = __webpack_require__(184).Router;
 	var routes = __webpack_require__(247);
-	// Include the Main Component
-
-
-	// This code here allows us to render our main component (in this case "Main")
-
-
-	// Include the Main React Dependencies
-
-
-	// Include the Main Component
-
-
-	// This code here allows us to render our main component (in this case "Main")
-
 
 	ReactDOM.render(React.createElement(
-	    Router,
-	    null,
-	    routes
+	  Router,
+	  null,
+	  routes
 	), document.getElementById('app'));
 
 /***/ },
@@ -21279,23 +21264,23 @@
 	var React = __webpack_require__(1);
 
 	var Home = React.createClass({
-	    displayName: "Home",
+	  displayName: "Home",
 
-	    render: function render() {
-	        return React.createElement(
-	            "div",
-	            null,
-	            React.createElement(
-	                "div",
-	                { className: "row" },
-	                React.createElement(
-	                    "div",
-	                    { className: "main" },
-	                    React.createElement("img", { className: "logo", src: "img/logo.png", alt: "" })
-	                )
-	            )
-	        );
-	    }
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "div",
+	        { className: "row" },
+	        React.createElement(
+	          "div",
+	          { className: "main" },
+	          React.createElement("img", { className: "logo", src: "img/logo.png", alt: "" })
+	        )
+	      )
+	    );
+	  }
 	});
 
 	module.exports = Home;
@@ -21329,55 +21314,64 @@
 	          { 'class': 'navbar navbar-inverse navbar-fixed-top' },
 	          React.createElement(
 	            'a',
-	            { className: 'navbar-brand navbar-left', href: '/' },
+	            { className: 'navbar-left', href: '#home' },
 	            React.createElement('img', { className: 'logo-hover nav-logo', src: '/img/nav-logo.png', alt: 'Chefs-on-me' })
 	          ),
 	          React.createElement(
-	            'div',
-	            { className: 'collapse navbar-collapse navbar-header navbar-right navHeaderCollapse' },
+	            'ul',
+	            { className: 'nav navbar-nav navbar-right' },
 	            React.createElement(
-	              'ul',
-	              { className: 'nav navbar-nav navbar-right' },
+	              'li',
+	              null,
 	              React.createElement(
-	                'li',
-	                null,
-	                React.createElement(
-	                  'a',
-	                  { href: '#home' },
-	                  'Home'
-	                )
-	              ),
+	                'a',
+	                { href: '#home' },
+	                'Home'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
 	              React.createElement(
-	                'li',
-	                null,
-	                React.createElement(
-	                  'a',
-	                  { href: '#about', 'data-toggle': 'modal' },
-	                  'About Us'
-	                )
-	              ),
+	                'a',
+	                { href: '#about', 'data-toggle': 'modal' },
+	                'About Us'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
 	              React.createElement(
-	                'li',
-	                null,
-	                React.createElement(
-	                  'a',
-	                  { href: '#search' },
-	                  'Find A Chef'
-	                )
-	              ),
+	                'a',
+	                { href: '#team', 'data-toggle': 'modal' },
+	                'Team'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
 	              React.createElement(
-	                'li',
-	                null,
-	                React.createElement(
-	                  'a',
-	                  { href: '#signup', 'data-toggle': 'modal' },
-	                  'Sign Up / Login'
-	                )
+	                'a',
+	                { href: '#search' },
+	                'Find A Chef'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { href: '#signup', 'data-toggle': 'modal' },
+	                'Sign Up / Login'
 	              )
 	            )
 	          )
 	        )
 	      ),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
 	      React.createElement(
 	        'div',
 	        { className: 'row' },
@@ -27073,6 +27067,7 @@
 		React.createElement(Route, { path: 'Search', component: Search }),
 		React.createElement(Route, { path: 'Signup', component: Signup }),
 		React.createElement(Route, { path: 'About', component: About }),
+		React.createElement(Route, { path: 'Team', component: Team }),
 		React.createElement(IndexRedirect, { to: "/Home" })
 	);
 
@@ -27088,10 +27083,26 @@
 	    displayName: "About",
 
 	    render: function render() {
+
+	        var aboutStyle = {
+	            color: "white",
+	            fontSize: "24",
+	            textAlign: "center",
+	            backgroundColor: "#41DEB8",
+	            opacity: "0.75"
+	        };
 	        return React.createElement(
 	            "div",
-	            { className: "col-lg-8" },
-	            ">",
+	            { style: aboutStyle, className: "col-lg-8 col-lg-offset-2" },
+	            React.createElement(
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "h2",
+	                    null,
+	                    "About Us"
+	                )
+	            ),
 	            React.createElement(
 	                "div",
 	                { className: "row" },

@@ -18,16 +18,17 @@ var Main = React.createClass({
               <a className="navbar-left" href="#home">
                 <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
               </a>
-              
-                <ul className="nav navbar-nav navbar-right" >
 
-	              	<li>
-	              		<a href="#home">Home</a>
-	              	</li>
+              <ul className="nav navbar-nav navbar-right" >
 
-	                  <li><a href ="#about" data-toggle="modal">About Us</a>
-	                  </li>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
 
+                <li><a href ="#about" data-toggle="modal">About Us</a>
+                </li>
+                <li><a href ="#team" data-toggle="modal">Team</a>
+                </li>
 	                <li>
 	                	<a href="#search">Find A Chef</a>
 	                </li>
