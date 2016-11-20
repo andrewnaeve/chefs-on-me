@@ -1,17 +1,22 @@
 var React = require( 'react' );
 
-class Home extends React.Component {
 
-    render() {
+
+
+var Home = React.createClass({
+    render: function () {
         return (
-            <div className="row">
-                <div className="main">
-                    <img className="logo" src="img/logo.png" alt=""/>
-                </div>
+            <div>
+                    <div className="row">
+                        <div className="main">
+                            <img className="logo" src="img/logo.png" alt=""/>
+                        </div>
+                    </div>
             </div>
 
         )
     }
-}
+})
 
-export default Home;
+module.exports = Home;
+

@@ -1,9 +1,9 @@
 var React = require('react');
 
 
-class Home extends React.Component{
 
-  render() {
+var Navbar = React.createClass({
+  render: function () {
     return (
       <div className="row">
         <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
@@ -33,6 +33,9 @@ class Home extends React.Component{
       </div>
     )
   }
-}
 
-export default Navbar;
+})
+
+module.exports = Navbar;
+
+

@@ -1,22 +1,9 @@
 var React = require('react');
 
+
+
 var Search = React.createClass({
-
-    handleChange: function(e) {
-        var searchTerm = e.target.value;
-        this.props.onChange(searchTerm)
-    },
-
-    onButtonClick: function(e) {
-        e.preventDefault();
-        var search = this.refs.search.value;
-        this.props.onChange(search)
-        alert(search)
-        
-
-    },
-
-    render: function() {
+    render: function () {
         return(
             <div>
                 <form onSubmit={this.onButtonClick}>
@@ -34,6 +21,30 @@ var Search = React.createClass({
     }
 
 })
+// getInitialState () {
+//     return { searctTerm: '' };
+// },
+    // handleChange: function(e) {
+    //     var searchTerm = e.target.value;
+    //     this.props.onChange(searchTerm)
+    // },
+    // onButtonClick (e) {
+    //     this.setState({
+    //         searchTerm: e
+    //     });
+    // },
+
+    // onButtonClick (e) {
+    //     e.preventDefault();
+    //     var search = this.refs.search.value;
+    //     this.props.onChange(search)
+    //     alert(search)    
+
+    // },
+
+
+
+
 
 module.exports = Search;
 
