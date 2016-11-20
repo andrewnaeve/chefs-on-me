@@ -28,7 +28,8 @@ module.exports = (
 		<Route path='Signup' component={Signup} >
 
 		</Route>
-		
+
+
 		<Route path='About' component={About} >
 
 		</Route>
