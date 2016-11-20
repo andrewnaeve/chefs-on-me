@@ -6,7 +6,7 @@ var Main = React.createClass({
 	getInitialState: function () {
 		return { searchTerm: '', zipCode: '' }
 	},
-  
+
 	//render component
 	render: function(){
 		return(
