@@ -29,9 +29,11 @@ module.exports = (
 
 		</Route>
 
+
 		<Route path='About' component={About} >
 
 		</Route>
+
 
 		<IndexRedirect to={"/Home"} />
 
