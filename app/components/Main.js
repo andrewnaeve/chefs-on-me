@@ -1,11 +1,21 @@
 // Include React
 var React = require('react');
 var Signup = require('./children/Signup.js');
+var Search = require('./children/Search');
+var Display = require('./children/Display');
 
 var Main = React.createClass({
 
 	getInitialState: function () {
-		return { searchTerm: '', zipCode: '' }
+		return { searchTerm: '' }
+	},
+
+	updateSearch: function (newTerm) {
+
+		this.setState({
+			searchTerm: newTerm,
+		});
+
 	},
 
 	//render component
@@ -37,7 +47,24 @@ var Main = React.createClass({
             <h1>Chefs On Me</h1>
           </div>
         </div>
+        <div className="container">
+
+          <div className="row">
+            <div className="jumbotron">
+              <h1>Chefs On Me</h1>
+            </div>
+          </div>
+          <div className="row">
+            <Search onChange={this.updateSearch}/>
+          </div>
+          <div className="row">
+            <Display searchTerm={this.state.searchTerm}/>
+          </div>
+
+
+        </div>
         <Signup />
+
       </div>
 		)
 	}
