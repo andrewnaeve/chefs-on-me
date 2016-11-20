@@ -1,13 +1,9 @@
 var React = require('react');
 
 
-var Navbar = React.createClass({
-  getInitialState: function(){
-    return {
-      logged_in: false
-    }
-  },
-  render: function(){
+class Home extends React.Component{
+
+  render() {
     return (
       <div className="row">
         <div className="collapse navbar-collapse navbar-header navbar-right navHeaderCollapse">
@@ -37,6 +33,6 @@ var Navbar = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = Navbar;
+export default Navbar;
