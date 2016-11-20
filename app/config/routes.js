@@ -29,6 +29,10 @@ module.exports = (
 
 		</Route>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f5df2c2adb002a24182942b79a0e3509adcea149
 		<Route path='About' component={About} >
 
 		</Route>
