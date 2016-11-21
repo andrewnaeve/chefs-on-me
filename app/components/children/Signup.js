@@ -36,10 +36,17 @@ var Signup = React.createClass({
 	},
 
 	render: function () {
+
+		 var signUpStyle = {
+            color: "white",
+            fontSize: "24",
+            backgroundColor: "rgba(28, 175, 237, 0.75)",
+            fontFamily: "'Open Sans', sans-serif"
+        };
 		
 		return (
 			<div className="row">
-				<div className="col-md-6">
+				<div style={signUpStyle} className="col-md-6">
 				
 					<h2>Sign Up!</h2>
 
@@ -71,8 +78,8 @@ var Signup = React.createClass({
 							<button type="submit" className="btn btn-primary">Submit</button>
 						</form>
 				</div>
-				<div className="col-md-4 col-md-offset-2">
 
+				<div style={signUpStyle} className="col-md-4 col-md-offset-2">
 					<h2>Log In</h2>
 					<div className="form-group">
 						<label htmlFor="email">Email address</label>
