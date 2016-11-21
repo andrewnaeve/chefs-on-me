@@ -19,6 +19,7 @@ var Signup = require('../components/children/Signup');
 module.exports = (
 
 	<Route path='/' component={Main}>
+	
 		<Route path='Home' component={Home} >
 
 		</Route>
