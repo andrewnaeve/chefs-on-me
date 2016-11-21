@@ -21,7 +21,7 @@ var Signup = React.createClass({
 		console.log(email)
 		var password = this.refs.password.value;
 		console.log(password)
-		
+
 
 
 		helpers.postSaved(namebro, email, password)
@@ -36,47 +36,55 @@ var Signup = React.createClass({
 	},
 
 	render: function () {
-
+    var facebook = {
+      width:190
+    }
+    var signupDiv = {
+      padding:20
+    }
 		 var signUpStyle = {
             color: "white",
             fontSize: "24",
             backgroundColor: "rgba(28, 175, 237, 0.75)",
-            fontFamily: "'Open Sans', sans-serif"
+            fontFamily: "'Open Sans', sans-serif",
+						padding: 10
         };
-		
+
 		return (
 			<div className="row">
 				<div style={signUpStyle} className="col-md-6">
-				
+
 					<h2>Sign Up!</h2>
 
-						<form onSubmit={this.onButtonClick} className="create-update-form" >
-							<div className="form-group">
-								<label htmlFor="name">Name</label>
-								<input type="text" className="form-control" id="name" aria-describedby="Name" placeholder="Full Name" ref="name" />
-							</div>
+					<form onSubmit={this.onButtonClick} className="create-update-form" >
+						<div className="form-group">
+							<label htmlFor="name">Name</label>
+							<input type="text" className="form-control" id="name" aria-describedby="Name" placeholder="Full Name" ref="name" />
+						</div>
 
-							<div className="form-group">
-								<label htmlFor="email">Email address</label>
-								<input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" ref="email" />
+						<div className="form-group">
+							<label htmlFor="email">Email address</label>
+							<input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" ref="email" />
 
-							</div>
+						</div>
 
-							<div className="form-group">
-								<label htmlFor="password">Password</label>
-								<input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
-							</div>
+						<div className="form-group">
+							<label htmlFor="password">Password</label>
+							<input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
+						</div>
 
-							<div className="radio">
-								<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="0" />Chef</label>
-							</div>
+						<div className="radio">
+							<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="0" />Chef</label>
+						</div>
 
-							<div className="radio">
-								<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="1" />Diner</label>
-							</div>
-
-							<button type="submit" className="btn btn-primary">Submit</button>
-						</form>
+						<div className="radio">
+							<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="1" />Diner</label>
+						</div>
+            <div className="row" style={signupDiv}>
+              <button type="submit" className="btn btn-primary">Submit</button>
+              <img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
+            </div>
+					</form>
 				</div>
 
 				<div style={signUpStyle} className="col-md-4 col-md-offset-2">
@@ -91,11 +99,15 @@ var Signup = React.createClass({
 						<label htmlFor="password">Password</label>
 						<input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
 					</div>
+          <div className="row" style={signupDiv}>
+            <button type="submit" className="btn btn-primary">Submit</button>
+            <img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
+          </div>
 				</div>
 			</div>
 			)
 		}
 
 })
- 
+
 module.exports = Signup;
