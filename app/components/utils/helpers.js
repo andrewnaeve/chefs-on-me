@@ -12,6 +12,7 @@ var helpers = {
 		var password = password;
 
 		var newUser = {name, email, password};
+
 		return axios.post('/create/users', newUser)
 
 			.then(function(results){
@@ -21,7 +22,21 @@ var helpers = {
 				return results._id;
 			})
 
-	}
+		},
+
+	getSaved: function(searchTerm) {
+
+		var searchTerm = {"term" : searchTerm};
+
+		return axios.post('/retrieve', searchTerm)
+
+			.then(function(results) {
+				console.log("Results are in " + JSON.stringify(results.name))
+				return results;
+			})	
+	},
+
+
 };
 
 // We export the helpers function 
