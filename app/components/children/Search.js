@@ -1,5 +1,6 @@
 var React = require('react');
 var Display = require('./Display');
+var helpers = require('../utils/helpers')
 
 
 
@@ -46,7 +47,7 @@ var Search = React.createClass({
     },
 
     render: function () {
-        
+
         var searchStyle = {
             color: "white",
             fontSize: "24",
@@ -58,7 +59,7 @@ var Search = React.createClass({
 
 
             <div className="col-lg-8 col-lg-offset-2" style={searchStyle}>
-                <form onSubmit={this.changeState}>
+                <form onSubmit={this.handleChange}>
                     <h1>Lets match you up with a nearby Chef.</h1>
                     <br />
 
