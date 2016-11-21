@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+
 var mongoose = require('mongoose');
 
 //Require History Schema
@@ -58,33 +59,26 @@ app.post('/create/users', function(req, res) {
 
 });
 
-// app.post('/create', function(req, res) {
-//   var UserOrChef = req.body.
-// });
+app.post('/retrieve', function(req, res) {
+  var thing = req.body.term;
 
-// app.get('/create/user', function(req, res) {
-//   res.send('hi')
-// })
+  console.log("Search thang " + thing)
+
+  // var searchTerm = req.name;
+  // console.log("This is a search " + searchTerm)
+  	User.find({ 'name' : thing })
+		.exec(function(err, doc){
+			if(err){
+				console.log(err);
+			}
+			else {
+				res.send(doc);
+			}
+
+		})
+})
 
 
-
-
-// app.post('/hi/users', function(req, res) {
-// res.send('hi')
-
-  // var newUser = new User(req.body);
-  // newUser.save(function(err, doc) {
-  //   if(err) {
-  //     res.send(err);
-  //   }
-  //   else {
-  //     console.log(doc);
-  //   }
-  // })
-  
-// })
-
-// Listener
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });

@@ -1,12 +1,15 @@
 var React = require('react');
 var Display = require('./Display');
-
+var helpers = require('../utils/helpers');
 
 
 var Search = React.createClass({
 
     getInitialState: function() {
-        return { searchTerm: '' }
+        return { 
+                searchTerm: '',
+                results: ''
+            }
     },
 
     changeState: function(newSearch) {
@@ -16,10 +19,36 @@ var Search = React.createClass({
     },
 
     handleChange: function (e) {
-        var search = this.refs.search.value;
-        console.log(search)
-        this.changeState(search)
+
+        e.preventDefault();
+        var searchTerm = this.refs.search.value;
+        console.log(searchTerm)
+        this.changeState(searchTerm)
+
+        helpers.getSaved(searchTerm)
+            .then(function(results){
+
+
+
+            var myArray = []
+            for (var i = 0; i < results.data.length; i++) {
+                myArray.push(
+                    <div className="station">
+                        name: {results.data[i].name}, email: {results.data[i].email}
+                    </div>
+                )
+            };
+
+
+                this.setState({
+                    results: myArray
+                });
+                console.log("saved results ", results.data);
+            }.bind(this))
+
     },
+
+
 
     render: function () {
         return(
@@ -37,36 +66,14 @@ var Search = React.createClass({
 
                 </form>
 
-                <Display searchTerm={this.state.searchTerm} />
+                <Display searchTerm={this.state.searchTerm} results={this.state.results}/>
+
 
             </div>
         )
     }
 
 })
-// getInitialState () {
-//     return { searctTerm: '' };
-// },
-    // handleChange: function(e) {
-    //     var searchTerm = e.target.value;
-    //     this.props.onChange(searchTerm)
-    // },
-    // onButtonClick (e) {
-    //     this.setState({
-    //         searchTerm: e
-    //     });
-    // },
-
-    // onButtonClick (e) {
-    //     e.preventDefault();
-    //     var search = this.refs.search.value;
-    //     this.props.onChange(search)
-    //     alert(search)    
-
-    // },
-
-
-
 
 
 module.exports = Search;

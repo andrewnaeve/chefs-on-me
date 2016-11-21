@@ -29,6 +29,7 @@ var UserSchema = new Schema({
     type: String,
     required: "Password is required"
   }
+
   // address: {
   //   type: String,
   //   required: "Address is required"
@@ -40,7 +41,10 @@ var UserSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method.
-var User = mongoose.model('User', UserSchema);
+var User = mongoose.model('User', UserSchema, 'user');
+
+
+
 
 // finally, we export the module, allowing server.js to hook into it with a require statement.
 module.exports = User;
