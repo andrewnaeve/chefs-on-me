@@ -1,5 +1,5 @@
 # Chefs On Me @ Startup Weekend LA
-##Website <www.chefsonme.co>
+##Website: www.chefsonme.co
 ## Intro: <br> We at Chef's on Me believe in bringing the exclusivity & luxury of a private chef experience to your home at an affordable price.<br>In a world where we can use our phones to order everything from a ride to a private plane, we at Chefs On Me bring that accessibility and ease to the private chef experience.<br>If you have ever wanted more time to spend with your loved ones, or the ability to bring together the people in your life our service is for you.
 
 
