@@ -13,14 +13,16 @@ var Main = React.createClass({
   render: function () {
 
   	var navStyle = {
-		 
-         fontSize: "22"
 
+         fontSize: "22",
+         width: "100%",
 	};
   var aStyle = {
+
     color: "white",
     fontWeight: "bold",
-    fontFamily: "'Open Sans', sans-serif"
+    fontFamily: "'Open Sans', sans-serif",
+    height: "59"
   };
 
         return (
@@ -36,9 +38,9 @@ var Main = React.createClass({
                                 </li>
                                 <li><a style={aStyle} href ="#about" data-toggle="modal">About Us</a>
                                 </li>
-                                <li><a href ="#team" data-toggle="modal">Team</a>
+                                <li><a style={aStyle} href ="#team" data-toggle="modal">Meet the Team</a>
                                 </li>
-                                <li><a href ="#tutorial" data-toggle="modal">Get Started</a>
+                                <li><a style={aStyle} href ="#tutorial" data-toggle="modal">How it Works</a>
                                 </li>
                                 <li>
                                     <a style={aStyle} href="#search">Find A Chef</a>
