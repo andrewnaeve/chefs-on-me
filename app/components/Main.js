@@ -13,12 +13,12 @@ var Main = React.createClass({
   render: function () {
 
   	var navStyle = {
-		 
+
          fontSize: "22",
-         width: "100%",        
+         width: "100%",
 	};
   var aStyle = {
-    
+
     color: "white",
     fontWeight: "bold",
     fontFamily: "'Open Sans', sans-serif",
@@ -27,13 +27,13 @@ var Main = React.createClass({
 
         return (
                 <div className="col-lg-12">
-                    <div style={navStyle} className="row">
-                        <div class="navbar navbar-inverse navbar-fixed-top">
-                            <a className="navbar-left" href="#home">
-                            <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
-                            </a>
-                            <ul className="nav navbar-nav navbar-right" >
-                                <li>
+                  <div style={navStyle} className="row">
+                    <div class="navbar navbar-inverse navbar-fixed-top">
+                      <a className="navbar-left" href="#home">
+                        <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
+                      </a>
+                      <ul className="nav navbar-nav navbar-right" >
+                        <li>
                                     <a style={aStyle} href="#home">Home</a>
                                 </li>
                                 <li><a style={aStyle} href ="#about" data-toggle="modal">About Us</a>
@@ -58,7 +58,7 @@ var Main = React.createClass({
                 </div>
                 )
     }
-  
+
 });
 
 module.exports = Main;
