@@ -15,7 +15,6 @@ var Main = React.createClass({
   	var navStyle = {
 		 
          fontSize: "22",
-         backgroundColor: "rgba(0, 0, 0, 0.3)",
          width: "100%",        
 	};
   var aStyle = {
