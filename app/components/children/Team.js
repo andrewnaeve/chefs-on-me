@@ -9,8 +9,8 @@ var Team = React.createClass({
             color: "white",
             fontSize: "24",
             textAlign: "center",
-            backgroundColor: "#41DEB8",
-            opacity: "0.75"
+            backgroundColor: "rgba(28, 175, 237, 0.75)",
+            fontFamily: "'Open Sans', sans-serif"
         };
         return (
             <div style={teamStyle} className="col-lg-8 col-lg-offset-2">
@@ -20,6 +20,20 @@ var Team = React.createClass({
               <div className="row">
                 <div className="team">
                   <img style={imgStyle} src="img/team.jpg" alt=""/>
+                  <br />
+                    <p><u>CEO:</u></p>
+                    <p>Bianca Zakerani</p>
+                    <p><u>CFO:</u></p>
+                    <p>James Heaphey</p>
+                    <p><u>Head of Market Research:</u></p>
+                    <p>Allison Taplin</p>
+                    <p><u>Head of Strategic Partnerships:</u></p>
+                    <p>Marissa Bowden</p>
+                    <p><u>Senior Developers:</u></p>
+                    <p>Drake Smith</p>
+                    <p>Andrew Naeve</p>
+                    <p>Jake Lee</p>
+                    <p>Andrew Kil</p> 
                 </div>
               </div>
             </div>
