@@ -52,7 +52,7 @@ var Signup = React.createClass({
 
 		return (
 			<div className="row">
-				<div style={signUpStyle} className="col-md-6">
+				<div style={signUpStyle} className="row">
 
 					<h2>Sign Up!</h2>
 

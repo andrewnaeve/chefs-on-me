@@ -27,6 +27,7 @@ var Search = React.createClass({
             <div className="col-lg-8 col-lg-offset-2" style={searchStyle}>
                 <form onSubmit={this.changeState}>
                     <h1>Let's match you up with a nearby Chef.</h1>
+                    <br />
                     <div className="form-group">
                         <label htmlFor="term">What type of cuisine are you feeling tonight?</label>
                         <input type="text" className="form-control" id="term" ref="search" placeholder="Italian, Japanese, French" />

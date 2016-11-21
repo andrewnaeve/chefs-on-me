@@ -19815,7 +19815,7 @@
 				{ className: 'row' },
 				React.createElement(
 					'div',
-					{ style: signUpStyle, className: 'col-md-6' },
+					{ style: signUpStyle, className: 'row' },
 					React.createElement(
 						'h2',
 						null,
@@ -21216,6 +21216,7 @@
 	                    null,
 	                    'Let\'s match you up with a nearby Chef.'
 	                ),
+	                React.createElement('br', null),
 	                React.createElement(
 	                    'div',
 	                    { className: 'form-group' },
@@ -21338,105 +21339,105 @@
 	var Display = __webpack_require__(181);
 
 	var Main = React.createClass({
-	    displayName: 'Main',
+	  displayName: 'Main',
 
 
-	    render: function render() {
+	  render: function render() {
 
-	        var navStyle = {
+	    var navStyle = {
 
-	            fontSize: "22"
+	      fontSize: "22"
 
-	        };
-	        var aStyle = {
-	            color: "white",
-	            fontWeight: "bold",
-	            fontFamily: "'Open Sans', sans-serif"
-	        };
+	    };
+	    var aStyle = {
+	      color: "white",
+	      fontWeight: "bold",
+	      fontFamily: "'Open Sans', sans-serif"
+	    };
 
-	        return React.createElement(
-	            'div',
-	            { className: 'col-lg-12' },
+	    return React.createElement(
+	      'div',
+	      { className: 'col-lg-12' },
+	      React.createElement(
+	        'div',
+	        { style: navStyle, className: 'row' },
+	        React.createElement(
+	          'div',
+	          { 'class': 'navbar navbar-inverse navbar-fixed-top' },
+	          React.createElement(
+	            'a',
+	            { className: 'navbar-left', href: '#home' },
+	            React.createElement('img', { className: 'logo-hover nav-logo', src: '/img/nav-logo.png', alt: 'Chefs-on-me' })
+	          ),
+	          React.createElement(
+	            'ul',
+	            { className: 'nav navbar-nav navbar-right' },
 	            React.createElement(
-	                'div',
-	                { style: navStyle, className: 'row' },
-	                React.createElement(
-	                    'div',
-	                    { 'class': 'navbar navbar-inverse navbar-fixed-top' },
-	                    React.createElement(
-	                        'a',
-	                        { className: 'navbar-left', href: '#home' },
-	                        React.createElement('img', { className: 'logo-hover nav-logo', src: '/img/nav-logo.png', alt: 'Chefs-on-me' })
-	                    ),
-	                    React.createElement(
-	                        'ul',
-	                        { className: 'nav navbar-nav navbar-right' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { style: aStyle, href: '#home' },
-	                                'Home'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { style: aStyle, href: '#about', 'data-toggle': 'modal' },
-	                                'About Us'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { href: '#team', 'data-toggle': 'modal' },
-	                                'Team'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { href: '#tutorial', 'data-toggle': 'modal' },
-	                                'Get Started'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { style: aStyle, href: '#search' },
-	                                'Find A Chef'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { style: aStyle, href: '#signup', 'data-toggle': 'modal' },
-	                                'Sign Up / Login'
-	                            )
-	                        )
-	                    )
-	                )
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { style: aStyle, href: '#home' },
+	                'Home'
+	              )
 	            ),
-	            React.createElement('br', null),
-	            React.createElement('br', null),
 	            React.createElement(
-	                'div',
-	                { className: 'row' },
-	                this.props.children
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { style: aStyle, href: '#about', 'data-toggle': 'modal' },
+	                'About Us'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { href: '#team', 'data-toggle': 'modal' },
+	                'Team'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { href: '#tutorial', 'data-toggle': 'modal' },
+	                'Get Started'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { style: aStyle, href: '#search' },
+	                'Find A Chef'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                { style: aStyle, href: '#signup', 'data-toggle': 'modal' },
+	                'Sign Up / Login'
+	              )
 	            )
-	        );
-	    }
+	          )
+	        )
+	      ),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
+	      React.createElement(
+	        'div',
+	        { className: 'row' },
+	        this.props.children
+	      )
+	    );
+	  }
 
 	});
 
@@ -27221,8 +27222,8 @@
 	            color: "white",
 	            fontSize: "24",
 	            textAlign: "center",
-	            backgroundColor: "#41DEB8",
-	            opacity: "0.75"
+	            backgroundColor: "rgba(28, 175, 237, 0.75)",
+	            fontFamily: "'Open Sans', sans-serif"
 	        };
 	        return React.createElement(
 	            "div",
@@ -27233,7 +27234,7 @@
 	                React.createElement(
 	                    "h2",
 	                    null,
-	                    "Getting Started"
+	                    "How It Works"
 	                )
 	            ),
 	            React.createElement(
@@ -27242,11 +27243,6 @@
 	                React.createElement(
 	                    "div",
 	                    { className: "tutorial" },
-	                    React.createElement(
-	                        "p",
-	                        null,
-	                        "Let the experience begin..."
-	                    ),
 	                    React.createElement("iframe", { style: videoStyle, width: "560", height: "500", src: "https://www.youtube.com/embed/mtNIdiOpJA0", frameborder: "0", allowfullscreen: true })
 	                )
 	            )
@@ -27275,8 +27271,8 @@
 	      color: "white",
 	      fontSize: "24",
 	      textAlign: "center",
-	      backgroundColor: "#41DEB8",
-	      opacity: "0.75"
+	      backgroundColor: "rgba(28, 175, 237, 0.75)",
+	      fontFamily: "'Open Sans', sans-serif"
 	    };
 	    return React.createElement(
 	      "div",
@@ -27296,7 +27292,93 @@
 	        React.createElement(
 	          "div",
 	          { className: "team" },
-	          React.createElement("img", { style: imgStyle, src: "img/team.jpg", alt: "" })
+	          React.createElement("img", { style: imgStyle, src: "img/team.jpg", alt: "" }),
+	          React.createElement("br", null),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              "u",
+	              null,
+	              "CEO:"
+	            )
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Bianca Zakerani"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              "u",
+	              null,
+	              "CFO:"
+	            )
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "James Heaphey"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              "u",
+	              null,
+	              "Head of Market Research:"
+	            )
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Allison Taplin"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              "u",
+	              null,
+	              "Head of Strategic Partnerships:"
+	            )
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Marissa Bowden"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              "u",
+	              null,
+	              "Senior Developers:"
+	            )
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Drake Smith"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Andrew Naeve"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Jake Lee"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Andrew Kil"
+	          )
 	        )
 	      )
 	    );
