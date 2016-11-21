@@ -36,6 +36,10 @@ var Main = React.createClass({
                                 </li>
                                 <li><a style={aStyle} href ="#about" data-toggle="modal">About Us</a>
                                 </li>
+                                <li><a href ="#team" data-toggle="modal">Team</a>
+                                </li>
+                                <li><a href ="#tutorial" data-toggle="modal">Get Started</a>
+                                </li>
                                 <li>
                                     <a style={aStyle} href="#search">Find A Chef</a>
                                 </li>
@@ -54,6 +58,5 @@ var Main = React.createClass({
     }
   
 });
-
 
 module.exports = Main;
