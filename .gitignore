@@ -14,7 +14,7 @@ build
 .env
 npm-debug.log
 
-bundle.js
+
 
 .DS_Store
 

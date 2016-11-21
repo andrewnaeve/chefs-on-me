@@ -14,6 +14,9 @@ var Main = require('../components/Main');
 var Home = require('../components/children/Home');
 var Search = require('../components/children/Search');
 var Signup = require('../components/children/Signup');
+var About = require('../components/children/About');
+var Tutorial = require('../components/children/Tutorial');
+var Team = require('../components/children/Team');
 
 
 module.exports = (
@@ -28,9 +31,22 @@ module.exports = (
 		<Route path='Signup' component={Signup} >
 
 		</Route>
-		
+    <Route path='Tutorial' component={Tutorial} >
+
+		</Route>
+
+
+		<Route path='About' component={About} >
+
+		</Route>
+    <Route path='Team' component={Team} >
+
+    </Route>
+
+
+
 		<IndexRedirect to={"/Home"} />
-		
+
 	</Route>
 
 );

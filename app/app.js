@@ -1,4 +1,3 @@
-// Include the Main React Dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Signup = require('./components/children/Signup');
@@ -10,33 +9,16 @@ var Main = require('./components/Main');
 
 var Router = require('react-router').Router
 var routes = require('./config/routes')
-// Include the Main Component
-
-
-// This code here allows us to render our main component (in this case "Main")
-
-
-
-// Include the Main React Dependencies
-
-
-// Include the Main Component
-
-
-// This code here allows us to render our main component (in this case "Main")
-
 
 
 
 
 
 ReactDOM.render(
-    
+
 <Router>{routes}</Router>,
 
 
 document.getElementById('app')
 
 )
-
-
