@@ -66,7 +66,7 @@ app.post('/retrieve', function(req, res) {
 
   // var searchTerm = req.name;
   // console.log("This is a search " + searchTerm)
-  	User.find({ 'name' : thing })
+  	User.find({ 'cuisine' : thing })
 		.exec(function(err, doc){
 			if(err){
 				console.log(err);

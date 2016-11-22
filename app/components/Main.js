@@ -52,6 +52,7 @@ var Main = React.createClass({
                     </div>
                     <br />
                     <br />
+                    
                     <div className="row">
                         {this.props.children}
                     </div>

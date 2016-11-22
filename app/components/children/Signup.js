@@ -16,15 +16,20 @@ var Signup = React.createClass({
 		console.log("hello")
 
 		var namebro = this.refs.name.value;
-		console.log(namebro)
+			console.log(namebro)
 		var email = this.refs.email.value;
-		console.log(email)
+			console.log(email)
 		var password = this.refs.password.value;
-		console.log(password)
+			console.log(password)
+		var picture = this.refs.picture.value;
+			console.log(picture)
+		var cuisine = this.refs.cuisine.value;
+			console.log(cuisine)
 
 
 
-		helpers.postSaved(namebro, email, password)
+
+		helpers.postSaved(namebro, email, password, picture, cuisine)
 			.then(function(data) {
 				console.log(data);
 			}.bind(this))
@@ -52,15 +57,18 @@ var Signup = React.createClass({
 
 		return (
 			<div className="row">
+
 				<div style={signUpStyle} className="col-md-6">
 
 					<h2>Sign Up!</h2>
 
 					<form onSubmit={this.onButtonClick} className="create-update-form" >
+
 						<div className="form-group">
 							<label htmlFor="name">Name</label>
 							<input type="text" className="form-control" id="name" aria-describedby="Name" placeholder="Full Name" ref="name" />
 						</div>
+
 
 						<div className="form-group">
 							<label htmlFor="email">Email address</label>
@@ -73,6 +81,16 @@ var Signup = React.createClass({
 							<input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
 						</div>
 
+						<div className="form-group">
+							<label htmlFor="picture">Picture URL</label>
+							<input type="text" className="form-control" id="picture" aria-describedby="Picture" placeholder="Enter a picture URL" ref="picture" />
+						</div>
+
+						<div className="form-group">
+							<label htmlFor="cuisine">Cuisine</label>
+							<input type="cuisine" className="form-control" id="cuisine" placeholder="What are your spcialties?" ref="cuisine" />
+						</div>
+
 						<div className="radio">
 							<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="0" />Chef</label>
 						</div>
@@ -80,10 +98,12 @@ var Signup = React.createClass({
 						<div className="radio">
 							<label><input type="radio" name="chefOrDiner" ref="dinerOrChef" value="1" />Diner</label>
 						</div>
-            <div className="row" style={signupDiv}>
-              <button type="submit" className="btn btn-primary">Submit</button>
-              <img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
-            </div>
+
+						<div className="row" style={signupDiv}>
+							<button type="submit" className="btn btn-primary">Submit</button>
+							<img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
+						</div>
+
 					</form>
 				</div>
 
@@ -99,10 +119,11 @@ var Signup = React.createClass({
 						<label htmlFor="password">Password</label>
 						<input type="password" className="form-control" id="password" placeholder="Password" ref="password" />
 					</div>
-          <div className="row" style={signupDiv}>
-            <button type="submit" className="btn btn-primary">Submit</button>
-            <img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
-          </div>
+
+					<div className="row" style={signupDiv}>
+						<button type="submit" className="btn btn-primary">Submit</button>
+						<img className="facebook" style={facebook} src="img/facebook-login.png" alt=""/>
+					</div>
 				</div>
 			</div>
 			)

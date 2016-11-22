@@ -19785,8 +19785,12 @@
 			console.log(email);
 			var password = this.refs.password.value;
 			console.log(password);
+			var picture = this.refs.picture.value;
+			console.log(picture);
+			var cuisine = this.refs.cuisine.value;
+			console.log(cuisine);
 
-			helpers.postSaved(namebro, email, password).then(function (data) {
+			helpers.postSaved(namebro, email, password, picture, cuisine).then(function (data) {
 				console.log(data);
 			}.bind(this));
 
@@ -19853,6 +19857,26 @@
 								'Password'
 							),
 							React.createElement('input', { type: 'password', className: 'form-control', id: 'password', placeholder: 'Password', ref: 'password' })
+						),
+						React.createElement(
+							'div',
+							{ className: 'form-group' },
+							React.createElement(
+								'label',
+								{ htmlFor: 'picture' },
+								'Picture URL'
+							),
+							React.createElement('input', { type: 'text', className: 'form-control', id: 'picture', 'aria-describedby': 'Picture', placeholder: 'Enter a picture URL', ref: 'picture' })
+						),
+						React.createElement(
+							'div',
+							{ className: 'form-group' },
+							React.createElement(
+								'label',
+								{ htmlFor: 'cuisine' },
+								'Cuisine'
+							),
+							React.createElement('input', { type: 'cuisine', className: 'form-control', id: 'cuisine', placeholder: 'What are your spcialties?', ref: 'cuisine' })
 						),
 						React.createElement(
 							'div',
@@ -19951,13 +19975,25 @@
 			var password = password;
 
 			var newUser = { name: name, email: email, password: password };
+
 			return axios.post('/create/users', newUser).then(function (results) {
 
 				console.log("axios results", results._id);
 
 				return results._id;
 			});
+		},
+
+		getSaved: function getSaved(searchTerm) {
+
+			var searchTerm = { "term": searchTerm };
+
+			return axios.post('/retrieve', searchTerm).then(function (results) {
+				console.log("Results are in " + JSON.stringify(results.name));
+				return results;
+			});
 		}
+
 	};
 
 	// We export the helpers function 
@@ -21213,13 +21249,60 @@
 
 	            var myArray = [];
 	            for (var i = 0; i < results.data.length; i++) {
+
 	                myArray.push(React.createElement(
 	                    'div',
-	                    { className: 'station' },
-	                    'name: ',
-	                    results.data[i].name,
-	                    ', email: ',
-	                    results.data[i].email
+	                    { className: 'container' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-3' },
+	                            React.createElement(
+	                                'div',
+	                                null,
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    ' Name: ',
+	                                    results.data[i].name,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                null,
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    ' Email: ',
+	                                    results.data[i].email,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                null,
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    React.createElement('img', { src: results.data[i].picture })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                null,
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    ' Name: ',
+	                                    results.data[i].cuisine,
+	                                    ' '
+	                                )
+	                            )
+	                        )
+	                    )
 	                ));
 	            };
 
@@ -21267,7 +21350,7 @@
 	                    'Search'
 	                )
 	            ),
-	            React.createElement(Display, { searchTerm: this.state.searchTerm })
+	            React.createElement(Display, { searchTerm: this.state.searchTerm, results: this.state.results })
 	        );
 	    }
 	});
@@ -21278,27 +21361,41 @@
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(1);
 
 	var Display = React.createClass({
-	    displayName: 'Display',
+	    displayName: "Display",
 
 
 	    render: function render() {
 
 	        var searchTerm = this.props.searchTerm;
+	        var results = this.props.results;
 
 	        console.log(searchTerm);
 
 	        return React.createElement(
-	            'div',
+	            "div",
 	            null,
 	            React.createElement(
-	                'h1',
+	                "div",
 	                null,
-	                searchTerm
+	                React.createElement(
+	                    "h1",
+	                    null,
+	                    searchTerm
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "container" },
+	                React.createElement(
+	                    "div",
+	                    { className: "row" },
+	                    results
+	                )
 	            )
 	        );
 	    }

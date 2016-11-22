@@ -12,13 +12,14 @@ var UserSchema = new Schema({
   // Notice that it is required, as well. It must be entered 
   // or else mongoose will throw an error.
 
-
+  
 
   name: {
       type: String,
       trim: true,
       required: "String is Required"
     },
+
 
   email: {
     type: String,
@@ -28,6 +29,16 @@ var UserSchema = new Schema({
   password: {
     type: String,
     required: "Password is required"
+  },
+
+  picture: {
+      type: String,
+      required: "Please use a picture"
+    },
+    
+  cuisine: {
+    type: String,
+    required: false
   }
   // address: {
   //   type: String,

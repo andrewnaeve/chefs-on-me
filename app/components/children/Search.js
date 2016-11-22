@@ -31,18 +31,36 @@ var Search = React.createClass({
 
             var myArray = []
             for (var i = 0; i < results.data.length; i++) {
+
                 myArray.push(
-                    <div className="station">
-                        name: {results.data[i].name}, email: {results.data[i].email}
+
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xs-3">
+                                <div>
+                                    <h3> Name: {results.data[i].name} </h3>
+                                </div>
+                                <div>
+                                    <h3> Email: {results.data[i].email} </h3>
+                                </div>
+                                <div>
+                                    <h3><img src={results.data[i].picture} /></h3>
+                                </div>
+                                <div>
+                                    <h3> Name: {results.data[i].cuisine} </h3>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
+
                 )
             };
 
-                this.setState({
-                    results: myArray
-                });
-                console.log("saved results ", results.data);
-            }.bind(this))
+            this.setState({
+                results: myArray
+            });
+            console.log("saved results ", results.data);
+        }.bind(this))
 
     },
 
@@ -73,7 +91,7 @@ var Search = React.createClass({
 
                 </form>
 
-                <Display searchTerm={this.state.searchTerm} />
+                <Display searchTerm={this.state.searchTerm} results={this.state.results}/>
 
             </div>
         )
