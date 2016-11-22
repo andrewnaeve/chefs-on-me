@@ -22,5 +22,5 @@
 ### Contributers:
 + Andrew Naeve
 + Andrew Kil <andrewkil.com> <email@andrewkil.com>
-+ Drake Smith
++ Drake Smith <drakesmith.co> <drakesmithjr@gmail.com>
 + Jake Lee
