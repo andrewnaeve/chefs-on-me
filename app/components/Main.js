@@ -28,7 +28,7 @@ var Main = React.createClass({
         return (
                 <div className="col-lg-12">
                   <div style={navStyle} className="row">
-                    <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div className="navbar navbar-inverse navbar-fixed-top">
                       <a className="navbar-left" href="#home">
                         <img className="logo-hover nav-logo" src="/img/nav-logo.png" alt="Chefs-on-me" />
                       </a>

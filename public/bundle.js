@@ -19785,7 +19785,7 @@
 			console.log(email);
 			var password = this.refs.password.value;
 			console.log(password);
-			var picture = this.refs.picture.value;
+			var picture = this.refs.url.value;
 			console.log(picture);
 			var cuisine = this.refs.cuisine.value;
 			console.log(cuisine);
@@ -19793,13 +19793,10 @@
 			helpers.postSaved(namebro, email, password, picture, cuisine).then(function (data) {
 				console.log(data);
 			}.bind(this));
-
-			//console.log(namebro);
-
-			//console.log(name + ' ' + email + ' ' + password + ' ' + address + ' ' + dinerOrChef);
 		},
 
 		render: function render() {
+
 			var facebook = {
 				width: 190
 			};
@@ -19809,6 +19806,8 @@
 			var signUpStyle = {
 				color: "white",
 				fontSize: "24",
+				marginTop: "50",
+				borderRadius: "10",
 				backgroundColor: "rgba(28, 175, 237, 0.75)",
 				fontFamily: "'Open Sans', sans-serif",
 				padding: 10
@@ -19864,9 +19863,9 @@
 							React.createElement(
 								'label',
 								{ htmlFor: 'picture' },
-								'Picture URL'
+								'Picture'
 							),
-							React.createElement('input', { type: 'text', className: 'form-control', id: 'picture', 'aria-describedby': 'Picture', placeholder: 'Enter a picture URL', ref: 'picture' })
+							React.createElement('input', { type: 'text', className: 'form-control', id: 'url', 'aria-describedby': 'url', placeholder: 'Enter a picture URL', ref: 'url' })
 						),
 						React.createElement(
 							'div',
@@ -19876,27 +19875,7 @@
 								{ htmlFor: 'cuisine' },
 								'Cuisine'
 							),
-							React.createElement('input', { type: 'cuisine', className: 'form-control', id: 'cuisine', placeholder: 'What are your spcialties?', ref: 'cuisine' })
-						),
-						React.createElement(
-							'div',
-							{ className: 'radio' },
-							React.createElement(
-								'label',
-								null,
-								React.createElement('input', { type: 'radio', name: 'chefOrDiner', ref: 'dinerOrChef', value: '0' }),
-								'Chef'
-							)
-						),
-						React.createElement(
-							'div',
-							{ className: 'radio' },
-							React.createElement(
-								'label',
-								null,
-								React.createElement('input', { type: 'radio', name: 'chefOrDiner', ref: 'dinerOrChef', value: '1' }),
-								'Diner'
-							)
+							React.createElement('input', { type: 'text', className: 'form-control', id: 'cuisine', placeholder: 'What are your spcialties?', ref: 'cuisine' })
 						),
 						React.createElement(
 							'div',
@@ -19926,7 +19905,7 @@
 							{ htmlFor: 'email' },
 							'Email address'
 						),
-						React.createElement('input', { type: 'email', className: 'form-control', id: 'email', 'aria-describedby': 'emailHelp', placeholder: 'Enter email', ref: 'email' })
+						React.createElement('input', { type: 'email', className: 'form-control', id: 'email', 'aria-describedby': 'emailHelp', placeholder: 'Enter email', ref: 'logEmail' })
 					),
 					React.createElement(
 						'div',
@@ -19936,7 +19915,7 @@
 							{ htmlFor: 'password' },
 							'Password'
 						),
-						React.createElement('input', { type: 'password', className: 'form-control', id: 'password', placeholder: 'Password', ref: 'password' })
+						React.createElement('input', { type: 'password', className: 'form-control', id: 'password', placeholder: 'Password', ref: 'logPassword' })
 					),
 					React.createElement(
 						'div',
@@ -21475,7 +21454,7 @@
 	        { style: navStyle, className: 'row' },
 	        React.createElement(
 	          'div',
-	          { 'class': 'navbar navbar-inverse navbar-fixed-top' },
+	          { className: 'navbar navbar-inverse navbar-fixed-top' },
 	          React.createElement(
 	            'a',
 	            { className: 'navbar-left', href: '#home' },

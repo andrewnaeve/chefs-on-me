@@ -31,7 +31,7 @@ var UserSchema = new Schema({
     required: "Password is required"
   },
 
-  picture: {
+  url: {
       type: String,
       required: "Please use a picture"
     },
