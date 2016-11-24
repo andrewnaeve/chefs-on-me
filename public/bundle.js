@@ -19766,9 +19766,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
-
 	var helpers = __webpack_require__(160);
-
 	var Signup = React.createClass({
 		displayName: 'Signup',
 
@@ -19930,7 +19928,6 @@
 				)
 			);
 		}
-
 	});
 
 	module.exports = Signup;
@@ -21228,70 +21225,10 @@
 	        this.changeState(searchTerm);
 
 	        helpers.getSaved(searchTerm).then(function (results) {
-
-	            var myArray = [];
-	            for (var i = 0; i < results.data.length; i++) {
-
-	                myArray.push(React.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'row' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-3' },
-	                            React.createElement(
-	                                'div',
-	                                null,
-	                                React.createElement(
-	                                    'h3',
-	                                    null,
-	                                    ' Name: ',
-	                                    results.data[i].name,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                null,
-	                                React.createElement(
-	                                    'h3',
-	                                    null,
-	                                    ' Email: ',
-	                                    results.data[i].email,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                null,
-	                                React.createElement(
-	                                    'h3',
-	                                    null,
-	                                    React.createElement('img', { src: results.data[i].picture })
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                null,
-	                                React.createElement(
-	                                    'h3',
-	                                    null,
-	                                    ' Name: ',
-	                                    results.data[i].cuisine,
-	                                    ' '
-	                                )
-	                            )
-	                        )
-	                    )
-	                ));
-	            };
-
+	            console.log("saved results ", results);
 	            this.setState({
-	                results: myArray
+	                results: results
 	            });
-	            console.log("saved results ", results.data);
 	        }.bind(this));
 	    },
 
@@ -21356,18 +21293,66 @@
 	        var searchTerm = this.props.searchTerm;
 	        var results = this.props.results;
 	        console.log(searchTerm);
+	        console.log("Hi results ");
+	        var card = {
+	            width: 200
+	        };
 
+	        if (this.props.results === '') {
+	            return React.createElement(
+	                'div',
+	                null,
+	                React.createElement(
+	                    'h1',
+	                    null,
+	                    'hi'
+	                )
+	            );
+	        } else {
+	            var result = this.props.results.data.map(function (result, index) {
+	                return React.createElement(
+	                    'div',
+	                    { key: index },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-md-4' },
+	                            React.createElement(
+	                                'h2',
+	                                null,
+	                                result.name
+	                            )
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            null,
+	                            React.createElement(
+	                                'h3',
+	                                null,
+	                                React.createElement('img', { src: result.pic, style: card })
+	                            )
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            null,
+	                            React.createElement(
+	                                'h3',
+	                                null,
+	                                result.cuisine
+	                            )
+	                        )
+	                    )
+	                );
+	            }.bind(this));
+	        }
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(
-	                'h1',
-	                null,
-	                'hi'
-	            )
+	            result
 	        );
 	    }
-
 	});
 
 	module.exports = Display;
@@ -27318,7 +27303,13 @@
 	                React.createElement(
 	                    "div",
 	                    { className: "tutorial" },
-	                    React.createElement("iframe", { style: videoStyle, width: "560", height: "500", src: "https://www.youtube.com/embed/mtNIdiOpJA0", frameborder: "0", allowfullscreen: true })
+	                    React.createElement("iframe", {
+	                        style: videoStyle,
+	                        width: "560",
+	                        height: "500",
+	                        src: "https://www.youtube.com/embed/mtNIdiOpJA0",
+	                        frameborder: "0",
+	                        allowfullscreen: true })
 	                )
 	            )
 	        );
