@@ -6,24 +6,18 @@ var Display = React.createClass({
 
         var searchTerm = this.props.searchTerm; 
         var results = this.props.results;
-
         console.log(searchTerm)
 
+
         return(
+
             <div>
-                <div>
-                    <h1>{searchTerm}</h1>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        {results}
-                    </div>
-                </div>
+                <h1>hi</h1>
             </div>
-
-        );
+ 
+        )
     }
-
+        
 });
 
 module.exports = Display;

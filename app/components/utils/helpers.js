@@ -5,19 +5,22 @@ var axios = require('axios');
 // Helper Functions (in this case the only one is runQuery)
 var helpers = {
 
-	postSaved: function(name, email, password){
+	postSaved: function(name, email, password, pic, cuisine){
 		console.log("WTF")
 		var name = name;
 		var email = email;
 		var password = password;
+		var pic = pic;
+		var cuisine = cuisine;
 
-		var newUser = {name, email, password};
-
-		return axios.post('/create/users', newUser)
+		var guy = {name, email, password, pic, cuisine};
+		console.log(guy)
+		return axios.post('/create/users', guy)
+		console.log("GGGf")
 
 			.then(function(results){
 
-				console.log("axios results", results._id);
+				console.log("Shit got saved");
 
 				return results._id;
 			})
@@ -31,7 +34,7 @@ var helpers = {
 		return axios.post('/retrieve', searchTerm)
 
 			.then(function(results) {
-				console.log("Results are in " + JSON.stringify(results.name))
+				console.log("hi")
 				return results;
 			})	
 	},

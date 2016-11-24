@@ -21,7 +21,7 @@ var Signup = React.createClass({
 			console.log(email)
 		var password = this.refs.password.value;
 			console.log(password)
-		var picture = this.refs.url.value;
+		var picture = this.refs.pic.value;
 			console.log(picture)
 		var cuisine = this.refs.cuisine.value;
 			console.log(cuisine)
@@ -31,7 +31,7 @@ var Signup = React.createClass({
 
 		helpers.postSaved(namebro, email, password, picture, cuisine)
 			.then(function(data) {
-				console.log(data);
+				console.log("hello" + data);
 			}.bind(this))
 
 	},
@@ -80,8 +80,8 @@ var Signup = React.createClass({
 						</div>
 
 						<div className="form-group">
-							<label htmlFor="picture">Picture</label>
-							<input type="text" className="form-control" id="url" aria-describedby="url" placeholder="Enter a picture URL" ref="url" />
+							<label htmlFor="pic">Picture</label>
+							<input type="text" className="form-control" id="pic" aria-describedby="pic" placeholder="Enter a picture URL" ref="pic" />
 						</div>
 
 						<div className="form-group">

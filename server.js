@@ -44,7 +44,7 @@ app.get('/', function(req, res){
 
 
 app.post('/create/users', function(req, res) {
-
+  console.log("postin")
   var newUser = new User(req.body);
 
   newUser.save(function(err, doc) {

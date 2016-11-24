@@ -19785,13 +19785,13 @@
 			console.log(email);
 			var password = this.refs.password.value;
 			console.log(password);
-			var picture = this.refs.url.value;
+			var picture = this.refs.pic.value;
 			console.log(picture);
 			var cuisine = this.refs.cuisine.value;
 			console.log(cuisine);
 
 			helpers.postSaved(namebro, email, password, picture, cuisine).then(function (data) {
-				console.log(data);
+				console.log("hello" + data);
 			}.bind(this));
 		},
 
@@ -19862,10 +19862,10 @@
 							{ className: 'form-group' },
 							React.createElement(
 								'label',
-								{ htmlFor: 'picture' },
+								{ htmlFor: 'pic' },
 								'Picture'
 							),
-							React.createElement('input', { type: 'text', className: 'form-control', id: 'url', 'aria-describedby': 'url', placeholder: 'Enter a picture URL', ref: 'url' })
+							React.createElement('input', { type: 'text', className: 'form-control', id: 'pic', 'aria-describedby': 'pic', placeholder: 'Enter a picture URL', ref: 'pic' })
 						),
 						React.createElement(
 							'div',
@@ -19947,17 +19947,20 @@
 	// Helper Functions (in this case the only one is runQuery)
 	var helpers = {
 
-		postSaved: function postSaved(name, email, password) {
+		postSaved: function postSaved(name, email, password, pic, cuisine) {
 			console.log("WTF");
 			var name = name;
 			var email = email;
 			var password = password;
+			var pic = pic;
+			var cuisine = cuisine;
 
-			var newUser = { name: name, email: email, password: password };
+			var guy = { name: name, email: email, password: password, pic: pic, cuisine: cuisine };
+			console.log(guy);
+			return axios.post('/create/users', guy);
+			console.log("GGGf").then(function (results) {
 
-			return axios.post('/create/users', newUser).then(function (results) {
-
-				console.log("axios results", results._id);
+				console.log("Shit got saved");
 
 				return results._id;
 			});
@@ -19968,7 +19971,7 @@
 			var searchTerm = { "term": searchTerm };
 
 			return axios.post('/retrieve', searchTerm).then(function (results) {
-				console.log("Results are in " + JSON.stringify(results.name));
+				console.log("hi");
 				return results;
 			});
 		}
@@ -21340,41 +21343,27 @@
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(1);
 
 	var Display = React.createClass({
-	    displayName: "Display",
+	    displayName: 'Display',
 
 
 	    render: function render() {
 
 	        var searchTerm = this.props.searchTerm;
 	        var results = this.props.results;
-
 	        console.log(searchTerm);
 
 	        return React.createElement(
-	            "div",
+	            'div',
 	            null,
 	            React.createElement(
-	                "div",
+	                'h1',
 	                null,
-	                React.createElement(
-	                    "h1",
-	                    null,
-	                    searchTerm
-	                )
-	            ),
-	            React.createElement(
-	                "div",
-	                { className: "container" },
-	                React.createElement(
-	                    "div",
-	                    { className: "row" },
-	                    results
-	                )
+	                'hi'
 	            )
 	        );
 	    }
@@ -21434,12 +21423,10 @@
 	  render: function render() {
 
 	    var navStyle = {
-
 	      fontSize: "22",
 	      width: "100%"
 	    };
 	    var aStyle = {
-
 	      color: "white",
 	      fontWeight: "bold",
 	      fontFamily: "'Open Sans', sans-serif",
@@ -21529,7 +21516,6 @@
 	      )
 	    );
 	  }
-
 	});
 
 	module.exports = Main;
@@ -27194,15 +27180,13 @@
 
 	// Inclue the React library
 	var React = __webpack_require__(1);
-
 	// Include the Router
 	var Router = __webpack_require__(184);
 	var Route = Router.Route;
-
 	//  Include the IndexRoute (catch-all route)
 	var IndexRoute = Router.IndexRoute;
 	var IndexRedirect = Router.IndexRedirect;
-
+	var hashHistory = Router.hashHistory;
 	// Reference the high-level components
 	var Main = __webpack_require__(183);
 	var Home = __webpack_require__(182);
