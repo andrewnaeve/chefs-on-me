@@ -16,9 +16,7 @@ var About = require('../components/children/About');
 var Tutorial = require('../components/children/Tutorial');
 var Team = require('../components/children/Team');
 
-
 module.exports = (
-
 	<Route path='/' component={Main}>
 		<Route path='Home' component={Home} />
 		<Route path='Search' component={Search} />
@@ -28,5 +26,4 @@ module.exports = (
 		<Route path='Team' component={Team} />
 		<IndexRedirect to={"/Home"} />
 	</Route>
-
 );

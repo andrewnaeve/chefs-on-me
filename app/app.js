@@ -10,15 +10,9 @@ var Main = require('./components/Main');
 var Router = require('react-router').Router
 var routes = require('./config/routes')
 
-
-
-
-
 ReactDOM.render(
 
 <Router>{routes}</Router>,
-
-
 document.getElementById('app')
 
 )

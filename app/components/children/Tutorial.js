@@ -3,7 +3,7 @@ var React = require('react');
 var Tutorial = React.createClass({
     render: function () {
         var videoStyle = {
-          opacity: "1"
+            opacity: "1"
         }
         var tutorialStyle = {
             color: "white",
@@ -14,14 +14,20 @@ var Tutorial = React.createClass({
         };
         return (
             <div style={tutorialStyle} className="col-lg-8 col-lg-offset-2">
-              <div className="row">
-                <h2>How It Works</h2>
-              </div>
-              <div className="row">
-                <div className="tutorial">
-                  <iframe style={videoStyle} width="560" height="500" src="https://www.youtube.com/embed/mtNIdiOpJA0" frameborder="0" allowfullscreen></iframe>
-                  </div>
-              </div>
+                <div className="row">
+                    <h2>How It Works</h2>
+                </div>
+                <div className="row">
+                    <div className="tutorial">
+                        <iframe
+                            style={videoStyle}
+                            width="560"
+                            height="500"
+                            src="https://www.youtube.com/embed/mtNIdiOpJA0"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         )
     }

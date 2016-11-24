@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
 	<meta charset="UTF-8">
 	<title>Chefs On Me!</title>
-
 	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	</head>
 
-<body>
+	<body>
 	<div class="fullscreen-bg">
 		<video id="bgVideo" preload="true" autoplay loop muted>
-		 <source src="video/food-compressed.mp4" type="video/mp4">
+		<source src="video/food-compressed.mp4" type="video/mp4">
 		</video>
-		
 		<div class="container">
-			<div id="app"></div>
+		<div id="app"></div>
 		</div>
 	</div>
-
-
 	<!-- This is where React will deploy the contents it generates -->
-
-
 	<!-- All of our JS code will be transpiled into this bundle.js file -->
 	<script src="bundle.js"></script>
-
-</body>
+	</body>
 </html>
+
